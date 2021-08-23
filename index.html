@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./desafio.css">
+    <title>Formulário de Currículo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- cabeçalho: título e parágrafo -->
+    <div>
+        <h1 id="titulo">JobsNet
+            <img src="./quimica.png" name="imagem" alt="">
+        </h1>
+        
+        <div id="subtitulo">
+            <p id="subtitulo" class="subtituloUm">Que tal se conectar com ótimas oportunidades de emprego?!</p>
+            <p id="subtitulo">Preencha suas informações nos campos abaixo e nós, da JobsNet, encontraremos empregos que são matchs perfeitos para você. </p>
+        </div>
+    </div>
+
+    <!-- corpo do formulário -->
+    <form>
+
+        <!-- dados pessoais -->
+        <fieldset class="bloco">
+            <h3 class="titulo2">Dados Pessoais</h3>
+            <!-- nome -->
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input id="nome" type="text" required>
+                <label for="cargoPretendido">Cargo Pretendido:</label>
+                <input id="cargo" type="text" required>
+            </div>
+            <!-- data nascimento -->
+            <div class="campo">
+                <label for="data">Data de nascimento:</label>
+                <input id="data" type="date"required>
+            </div>
+            <!-- gênero e estado civil -->
+            <div class="campo">
+                <label for="genero">Gênero:</label>
+                <select name="genero" id="genero">
+                    <option value="">Selecione</option>
+                    <option >Feminino</option>
+                    <option >Masculino</option>
+                    <option >Não Binário</option>
+                </select>
+
+                <label for="estado civil">Estado Civil:</label>
+                <select name="estadoCivil" id="estadoCivil">
+                    <option value="">Selecione</option>
+                    <option >Solteiro(a)</option>
+                    <option >Casado(a)</option>
+                    <option >Divorciado(a)</option>
+                    <option >Viúvo(a)</option>
+                </select>
+            </div>
+            <!-- identidade -->
+            <div class="campo">
+                <label for="identidade">Identidade:</label>
+                <input id="identidade" type="text" placeholder="Digite somente números" required>
+            <!-- CPF e validador (utilização do código das aulas)-->
+                <form>
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <label class="input-group-addon" id="sizing-addon1">CPF:</label>
+                            <input type="text" class="form-control" placeholder="Digite somente números"
+                                aria-describedby="sizing-addon1" id="cpf_digitado" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="container page-header">
+                <div id="success" class="alert alert-success" style="display: none;" role="alert">
+                    <strong>Oba!</strong> Seu CPF é válido
+                </div>
+                <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+                    <strong>Ops!</strong> Seu CPF não é válido
+                </div>
+            </div>
+                <!-- informações sobre dirigir -->
+            <div class="campo">
+                <label for="habilitacao">Habilitação:</label>
+                <div class="check">
+                    <input type="checkbox" id="semHabilitacao" name="semHabilitacao">
+                    <label for="semHabilitacao">Sem Habilitação</label>
+                    <input type="checkbox" id="categoriaA" name="categoriaA">
+                    <label for="categoriaA">Categoria A</label>
+                    <input type="checkbox" id="categoriaB" name="categoriaB">
+                    <label for="categoriaB">Categoria B</label> <br>
+                    <input type="checkbox" id="categoriaC" name="categoriaC">
+                    <label for="categoriaC">Categoria C</label>
+                    <input type="checkbox" id="categoriaD" name="categoriaD">
+                    <label for="categoriaD">Categoria D</label>
+                    <input type="checkbox" id="categoriaE" name="categoriaE">
+                    <label for="categoriaE">Categoria E</label>
+                </div>
+            </div>
+            <div class="campo">
+                <label for="veiculo">Possui Veículo?</label>
+                <select name="veiculo" id="veiculo">
+                    <option value="">Selecione</option>
+                    <option >sim</option>
+                    <option >não</option>
+                </select>
+            </div>
+            
+
+        </fieldset>
+
+         <!-- endereço-->
+        <fieldset class="bloco" method="get" action=".">
+            <h3 class="titulo2">Endereço</h3>
+            <!-- cep -->
+            <div class="campo">
+                <label for="cep">CEP:</label>
+                <input id="cep" type="text" onblur="pesquisacep(this.value);" required>
+            </div>
+            <!-- logradouro e número -->
+            <div class="campo">
+                <label for="logradouro">Logradouro:</label>
+                <input id="rua" type="text" required>
+                <label for="numero">nº:</label>
+                <input id="numero" type="text" required>
+            </div>
+            <!-- complemento e bairro -->
+            <div class="campo">
+                <label for="complemento">Complemento:</label>
+                <input id="complemento" type="text">
+                <label for="bairro">Bairro:</label>
+                <input id="bairro" type="text" required>  
+            </div>
+            <!-- Cidade e uf -->
+            <div class="campo">
+                <label for="cidade">Cidade:</label>
+                <input id="cidade" type="text" required>
+                <label for="uf">UF:</label>
+                <input id="uf" type="text" required>
+            </div>
+        </fieldset>
+
+        <!-- contatos -->
+        <fieldset class="bloco">
+            <h3 class="titulo2">Contatos</h3>
+            <div class="campo">
+                 <label for="email">E-mail:</label>
+                <input type="email" id="email" required >  
+            </div>
+            <div class="campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required>
+                <label for="telefone">Telefone 2:</label>
+                <input type="tel" id="telefone" >
+            </div>
+            <div class="campo">
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" required>
+                <label for="celular">Celular 2:</label>
+                <input type="tel" id="celular" >
+            </div>
+
+        </fieldset>
+        
+             <!-- botão de envio -->
+        <button class="botao" type="submit" onclick="validacao()"> Enviar</button>
+        
+       
+      
+    </form>
+</body>
+<!-- javascript validador de CPF -->
+<script src="./script.js"></script>
+<!-- javascript validador CEP -->
+<script src="./cep.js"></script>
+</html>
