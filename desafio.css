@@ -1,0 +1,79 @@
+*{
+    margin: 8px;
+    padding: 0px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+
+body{
+    background-color: ivory;
+    font-size: 22px;
+    margin: 20px;
+    justify-content: center;
+}
+
+fieldset {
+    border: 0;
+    margin: 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color:#DAA89B;
+    border-radius: 10px;
+    width: auto;
+    padding: 20px 15px;
+}
+
+button{
+    display: flex;
+    border: 1;
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+input, select{
+    border: 2;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 150px;
+    font-size: 20px;
+    justify-content: center;
+    padding: 2px 2px 2px 6px;
+    background-color: cornsilk;
+}
+
+label{
+    font-size: 25px;
+    margin: 0 auto;
+    width: auto;
+    
+}
+
+#titulo{
+    font-size: 120px;
+    font-style: oblique;
+    text-align: center;
+    color: #2C0E37;
+    padding: 30px;
+
+}
+#titulo img{
+    width: 85px;
+}
+
+#subtitulo{
+    font-size: 20px;
+    text-align: justify;
+}
+
+h3{
+    font-size: 30px;
+}
+
+button{
+    background-color: #F2DC5D;
+}
+
