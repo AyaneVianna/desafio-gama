@@ -8,7 +8,7 @@
 body{
     background-color: ivory;
     font-size: 22px;
-    margin: 20px;
+    margin: 10px 40px;
     justify-content: center;
 }
 
@@ -77,3 +77,13 @@ button{
     background-color: #F2DC5D;
 }
 
+footer{
+    
+    text-align: center;
+    font-size: 18px;
+    background-color: #daa89b;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 5px 150px;
+    
+}
