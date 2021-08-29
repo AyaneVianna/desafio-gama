@@ -1,0 +1,127 @@
+{
+    "openapi": "3.0.0",
+  
+    "info": {
+      "title": "API do Desafio Gama",
+      "description": "api para o desafio da gama, um projeto de formulário curricular",
+      "version": "0.0.1"
+    },
+  
+    "servers": [
+      {
+        "url": "http://localhost:5000/register",
+        "description": "ambiente de desenvolvimento"
+      }
+    ],
+  
+    "paths": {
+      "/register": {
+        "post": {
+          "summary": "Cadastro de candidato",
+          "description": "Rota de cadastro de usuário, recebe: nome, cargo, data, genero, estadoCivil, identidade, cpf_digitado, habilitação, veiculo, cep, rua, numero, complemento, bairro, cidade, uf, email, telefone, telefone2, celular, celular2 ",
+          "tags": ["candidato"],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "nome": {
+                      "type": "string"
+                    },
+                    "cargo": {
+                        "type": "date"
+                      },
+                      "data": {
+                        "type": "string"
+                      },
+                    "genero": {
+                      "type": "string"
+                    },
+                    "estadoCivil": {
+                        "type": "string"
+                      },
+                    "identidade": {
+                        "type": "string"
+                      },
+                    "cpf_digitado": {
+                        "type": "string"
+                      },
+                    "habilitacao": {
+                        "type": "string"
+                      },
+                    "veiculo": {
+                        "type": "string"
+                      },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "rua": {
+                        "type": "string"
+                      },
+                    "numero": {
+                        "type": "string"
+                      },
+                    "complemento": {
+                        "type": "string"
+                      },
+                    "bairro": {
+                        "type": "string"
+                      },
+                    "cidade": {
+                        "type": "string"
+                      },
+                    "uf": {
+                        "type": "string"
+                      },
+                    "email": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                        "type": "string"
+                      },
+                    "telefone2": {
+                        "type": "string"
+                      },
+                    "celular": {
+                        "type": "string"
+                      },
+                    "celular2": {
+                        "type": "string"
+                      }
+                  }
+                },
+                "examples": {
+                  "mine": {
+                    "value": {
+                      "nome": "Anny ",
+                      "cargo": "professora",
+                      "data": "09/09/2009",
+                      "genero": "feminino",
+                      "estadoCivil": "solteiro",
+                      "identidade": "0000000000",
+                      "cpf_digitado": "00000000000",
+                      "habilitacao": "sem habilitação",
+                      "veiculo": "não",
+                      "cep": "11111111",
+                      "rua": "aquela lá",
+                      "numero": "00",
+                      "complemento":"",
+                      "bairro":"qualquer",
+                      "cidade":"neverland",
+                      "uf":"to",
+                      "email":"mine@email.com",
+                      "telefone":"33335555",
+                      "telefone2":"",
+                      "celular":"999996666",
+                      "celular2":""
+
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
